@@ -8,6 +8,7 @@ package calculator1;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
@@ -38,6 +39,41 @@ class Calculator1 extends JFrame implements ActionListener{
 		catch (Exception e) { 
 			System.err.println(e.getMessage()); 
 		} 
+                //create a object of class
+                Calculator1 c = new Calculator1();
+                
+                //create a text file
+                l = new JTextField(16);
+                
+                l.setEditable(false);
+                //number buttons and operators
+                JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9,ba,bs,bd,bm,be,beq,beq1;
+                
+                //create number buttons
+                b0 = new JButton("0");
+                b1 = new JButton("1");
+                b2 = new JButton("2");
+                b3 = new JButton("3");
+                b4 = new JButton("4");
+                b5 = new JButton("5");
+                b6 = new JButton("6");
+                b7 = new JButton("7");
+                b8 = new JButton("8");
+                b9 = new JButton("9");
+                
+                //equals button
+                beq1 = new JButton("=");
+                
+                //operator buttons
+                ba = new JButton("+");
+                bs = new JButton("-");
+                bd = new JButton("/");
+                bm = new JButton("*");
+                beq = new JButton("C");
+                
+                //create . button
+                be = new JButton(".");
+                
     }
 
     @Override
