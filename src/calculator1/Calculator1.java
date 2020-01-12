@@ -130,9 +130,23 @@ class Calculator1 extends JFrame implements ActionListener{
 		f.show(); 
     }
 
-    @Override
+  
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            
+                String s = e.getActionCommand(); 
+                
+                // if the value is a number 
+		if ((s.charAt(0) >= '0' && s.charAt(0) <= '9') || s.charAt(0) == '.'){
+                    
+                    // if operand is present then add to second no 
+			if (!s1.equals("")) 
+				s2 = s2 + s; 
+			else
+				s0 = s0 + s; 
+                        
+                        // set the value of text 
+			l.setText(s0 + s1 + s2); 
+                }
     }
 
 }
