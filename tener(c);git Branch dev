@@ -1,0 +1,35 @@
+[33mcommit b893df2f749946c14f95119ec380aa19b6c1a57b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: AlenJankovic <43863305+AlenJankovic@users.noreply.github.com>
+Date:   Sun Jan 12 23:24:17 2020 +0100
+
+    Created gitignore
+
+[33mcommit 2bbe441bd5fb07f46db1d3e282727590ca60c478[m
+Author: AlenJankovic <43863305+AlenJankovic@users.noreply.github.com>
+Date:   Sun Jan 12 23:22:06 2020 +0100
+
+    Added licence
+
+[33mcommit dcd5c9e95c1991ccafbc8e96fd27c5048c6a7357[m
+Author: AlenJankovic <43863305+AlenJankovic@users.noreply.github.com>
+Date:   Sun Jan 12 23:20:01 2020 +0100
+
+    Creadted Readme file
+
+[33mcommit 1bd30c2a7995f19c83c883f3f850127b9946836a[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: alenj <alen.jankovic@bredband.net>
+Date:   Sun Jan 12 21:44:06 2020 +0100
+
+    Added buttons
+
+[33mcommit d264c1773c4608002eeed6135d1a66164277f5ae[m
+Author: alenj <alen.jankovic@bredband.net>
+Date:   Sun Jan 12 21:22:01 2020 +0100
+
+    create frame
+
+[33mcommit 47f718bc898a1fb454e2810bae301d4dd6b4f43b[m
+Author: alenj <alen.jankovic@bredband.net>
+Date:   Sun Jan 12 20:56:47 2020 +0100
+
+    Initial commit
