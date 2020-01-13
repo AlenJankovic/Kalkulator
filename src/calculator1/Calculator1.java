@@ -6,6 +6,7 @@
 
 package calculator1;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -98,11 +99,103 @@ class Calculator1 extends JFrame implements ActionListener{
                 beq.addActionListener(c);
                 beq1.addActionListener(c);
                 
+                
+                // add elements to panel 
+		p.add(l); 
+		p.add(ba); 
+		p.add(b1); 
+		p.add(b2); 
+		p.add(b3); 
+		p.add(bs); 
+		p.add(b4); 
+		p.add(b5); 
+		p.add(b6); 
+		p.add(bm); 
+		p.add(b7); 
+		p.add(b8); 
+		p.add(b9); 
+		p.add(bd); 
+		p.add(be); 
+		p.add(b0); 
+		p.add(beq); 
+		p.add(beq1); 
+                
+                // set Background of panel 
+		p.setBackground(Color.blue); 
+                
+                // add panel to frame 
+		f.add(p); 
+                
+                f.setSize(200, 220); 
+		f.show(); 
     }
 
-    @Override
+  
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            
+                String s = e.getActionCommand(); 
+                
+                // if the value is a number 
+		if ((s.charAt(0) >= '0' && s.charAt(0) <= '9') || s.charAt(0) == '.'){
+                    
+                    // if operand is present then add to second no 
+			if (!s1.equals("")) 
+				s2 = s2 + s; 
+			else
+				s0 = s0 + s; 
+                        
+                        // set the value of text 
+			l.setText(s0 + s1 + s2); 
+                }
+                else if (s.charAt(0) == '=') { 
+
+			double te; 
+
+			// store the value in 1st 
+			if (s1.equals("+")) 
+                                te = (Double.parseDouble(s0) + Double.parseDouble(s2)); 
+			else if (s1.equals("-")) 
+				te = (Double.parseDouble(s0) - Double.parseDouble(s2)); 
+			else if (s1.equals("/")) 
+				te = (Double.parseDouble(s0) / Double.parseDouble(s2)); 
+			else
+				te = (Double.parseDouble(s0) * Double.parseDouble(s2)); 
+                        // set the value of text 
+			l.setText(s0 + s1 + s2 + "=" + te); 
+
+			// convert it to string 
+			s0 = Double.toString(te); 
+
+			s1 = s2 = ""; 
+		} 
+                else { 
+			// if there was no operand 
+			if (s1.equals("") || s2.equals("")) 
+				s1 = s; 
+			// else evaluate 
+			else { 
+				double te; 
+                                
+                       // store the value in 1st 
+			if (s1.equals("+")) 
+				te = (Double.parseDouble(s0) + Double.parseDouble(s2)); 
+                        else if (s1.equals("-")) 
+				te = (Double.parseDouble(s0) - Double.parseDouble(s2)); 
+                        else if (s1.equals("/")) 
+				te = (Double.parseDouble(s0) / Double.parseDouble(s2)); 
+                        else
+				te = (Double.parseDouble(s0) * Double.parseDouble(s2)); 
+                        
+                        // convert it to string 
+				s0 = Double.toString(te); 
+                        // place the operator 
+				s1 = s; 
+                        // make the operand blank 
+				s2 = ""; 
+                }
+                        // set the value of text 
+			l.setText(s0 + s1 + s2); 
+                }
     }
 
 }
